@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background: url('../css/img/fondo2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    box-sizing: border-box;
+    animation: backgroundAnimation 15s infinite alternate;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    50% {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    animation: fadeInBlur 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes fadeInBlur {
+    0% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(3px);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Botones */
+  .buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    cursor: pointer;
+    animation: bounceButton 2s infinite;
+  }
+  
+  button:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  /* Animación de los botones */
+  @keyframes bounceButton {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación de los inputs y áreas de texto */
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none;
+    transition: all 0.3s ease;
+    animation: fadeInTextarea 1.5s ease-in-out;
+  }
+  
+  textarea:focus {
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animación de las áreas de texto */
+  @keyframes fadeInTextarea {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Secciones */
+  section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInSection 1.5s ease-out;
+  }
+  
+  /* Animación para las secciones */
+  @keyframes fadeInSection {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries para Responsividad */
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    textarea {
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    section {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    textarea {
+      height: 100px;
+    }
+  }
+  
